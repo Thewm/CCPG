@@ -41,7 +41,7 @@ const getSerialNumber = () => {
           passwordGenerator.pass;
         console.log(passwordGenerator.pass);
       } else {
-        alert("Your input must be 16-digits number");
+        alert("Your entered input must be 16-digits number");
       }
   });
 
@@ -53,7 +53,7 @@ const getSerialNumber = () => {
           passwordGenerator.pass;
         console.log(passwordGenerator.pass);
       } else {
-        alert("Your input must be 16-digits number");
+        alert("Your entered input must be 16-digits number");
       }
     }
   });
