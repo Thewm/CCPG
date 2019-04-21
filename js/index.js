@@ -20,7 +20,6 @@ const passwordGenerator = creditNumber => {
     } else if (_value < 10) arr.push(_value);
   }
 
-
   for (let i = 0; i < 4; i++) {
     if (arr.length >= 15) {
       pass.push(arr[choice * i]);
@@ -31,22 +30,31 @@ const passwordGenerator = creditNumber => {
   return pass.join("");
 };
 
-
 const getSerialNumber = () => {
   const btn = document.querySelector(".submit");
   let inputSerial = document.querySelector(".input").value;
 
   btn.addEventListener("click", _ => {
-    passwordGenerator(inputSerial);
-    document.querySelector(".pass-code").textContent = passwordGenerator.pass;
-    console.log(passwordGenerator.pass);
+      if (inputSerial.length === 16) {
+        passwordGenerator(inputSerial);
+        document.querySelector(".pass-code").textContent =
+          passwordGenerator.pass;
+        console.log(passwordGenerator.pass);
+      } else {
+        alert("Your input must be 16-digits number");
+      }
   });
 
   document.addEventListener("keypress", event => {
     if (event.keyCode === 13 || event.which === 13) {
-      passwordGenerator(inputSerial);
-      document.querySelector(".pass-code").textContent = passwordGenerator.pass;
-      console.log(passwordGenerator.pass);
+      if (inputSerial.length === 16) {
+        passwordGenerator(inputSerial);
+        document.querySelector(".pass-code").textContent =
+          passwordGenerator.pass;
+        console.log(passwordGenerator.pass);
+      } else {
+        alert("Your input must be 16-digits number");
+      }
     }
   });
 };
