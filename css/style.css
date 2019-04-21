@@ -1,14 +1,14 @@
 *,
-*::after,
-*:before {
+::after,
+:before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    outline: none;
+    outline: none
 }
 
 html {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 #wrapper {
@@ -16,9 +16,8 @@ html {
     height: 100vh;
     font-size: 62.5%;
     font-weight: 300;
-    font-family: 'Marck Script',
-    cursive;
-    background-image: linear-gradient(to right bottom, rgba(2, 2, 27, 0.719), rgb(2, 2, 27));
+    font-family: 'Marck Script', cursive;
+    background-image: linear-gradient(to right bottom, rgba(2, 2, 27, 0.719), #02021b)
 }
 
 .container {
@@ -26,8 +25,7 @@ html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
+    align-items: center
 }
 
 .header {
@@ -36,13 +34,13 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgba(160, 160, 160, 0.171);
+    border-bottom: 1px solid rgba(160, 160, 160, 0.171)
 }
 
 .header--logo {
     width: 6rem;
     margin-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 4rem
 }
 
 .main {
@@ -50,13 +48,12 @@ html {
     height: 80vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    padding: 5rem 0;
+    padding: 5rem 0
 }
 
-.main > * {
-    margin-bottom: 5rem;
+.main>* {
+    margin-bottom: 5rem
 }
 
 .input {
@@ -64,50 +61,48 @@ html {
     width: 30%;
     padding: .3rem;
     background-color: inherit;
-    border-bottom: 2px solid rgb(5, 5, 68);
-    color: rgb(151, 151, 151);
+    border-bottom: 2px solid #050544;
+    color: #979797;
     transition: all .3s;
     font-size: 1.5rem;
-    font-family: inherit;
+    font-family: inherit
 }
 
 .input:focus {
-    color: rgb(184, 139, 26);
-    border-bottom: 2px solid rgb(1, 1, 17);
+    color: #b88b1a;
+    border-bottom: 2px solid #010111;
     transition: all .5s;
-    width: 40%;
+    width: 40%
 }
-
 
 .submit {
     padding: .8rem 2.2rem;
     cursor: pointer;
     border-radius: .2rem;
-    background-color:rgb(3, 3, 37);
+    background-color: #030325;
     border: 0;
-    color: rgb(184, 139, 26);
+    color: #b88b1a;
     font-family: inherit;
     font-size: 1.4rem;
     transform: scale(1);
-    transition: all .3s;
+    transition: all .3s
 }
 
 .submit:hover {
-    background-color:rgb(4, 4, 29);
+    background-color: #04041d;
     transition: all .3s;
-    transform: scale(1.1);
-
+    transform: scale(1.1)
 }
 
 .output {
-    font-size: 1.5rem;
+    font-size: 1.5rem
 }
 
 .pass-text {
-    color: rgb(151, 151, 151);
+    color: #979797
 }
 
 .pass-code {
-    color: rgb(184, 139, 26);
-    font-size: 1.75rem;
+    color: #b88b1a;
+    font-size: 1.75rem
 }
