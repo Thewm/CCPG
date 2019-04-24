@@ -35,16 +35,21 @@ const getSerialNumber = () => {
   let inputSerial = document.querySelector(".input").value;
 
   btn.addEventListener("click", _ => {
-    passwordGenerator(inputSerial);
-    document.querySelector(".pass-code").textContent = passwordGenerator.pass;
-    console.log(passwordGenerator.pass);
+    if (inputSerial.split("").length === 16) {    
+      passwordGenerator(inputSerial);
+      document.querySelector(".pass-code").textContent = passwordGenerator.pass;
+      console.log(passwordGenerator.pass);
+    }
   });
 
   document.addEventListener("keypress", event => {
     if (event.keyCode === 13 || event.which === 13) {
-      passwordGenerator(inputSerial);
-      document.querySelector(".pass-code").textContent = passwordGenerator.pass;
-      console.log(passwordGenerator.pass);
+      if (inputSerial.split("").length === 16) {
+        passwordGenerator(inputSerial);
+        document.querySelector(".pass-code").textContent =
+          passwordGenerator.pass;
+        console.log(passwordGenerator.pass);
+      }
     }
   });
 };
