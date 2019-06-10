@@ -42,7 +42,7 @@ const passwordGenerator = creditNumber => {
       document.querySelector(".pass-code").textContent = pass.join("");
       return inputSerial;
     } else {
-      output.style.color = "#be260d";
+      output.style.color = "#db1d00";
       output.innerHTML = `Input must be greater than or equal to ${edgeCase}, So your entered input "${inputSerial.join(
         ""
       )}" has no chance to get result!!`;
