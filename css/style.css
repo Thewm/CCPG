@@ -84,7 +84,6 @@ html {
 }
 
 .submit:hover {
-    background-color: #04041d;
     transition: all .3s;
     transform: scale(1.1)
 }
