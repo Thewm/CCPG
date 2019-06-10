@@ -1,5 +1,6 @@
 let inputSerial = document.querySelector(".input").value;
 const output = document.querySelector(".output");
+let edgeCase = 8;
 const passwordGenerator = creditNumber => {
   let randNumber = Math.floor(Math.random() * 9),
     period = Math.floor(Math.random() * 3),
@@ -36,7 +37,7 @@ const passwordGenerator = creditNumber => {
 
   btn.addEventListener("click", _ => {
     console.log(inputSerial);
-    let edgeCase = 8;
+    
     if (inputSerial.length >= edgeCase) {
       document.querySelector(".pass-code").textContent = pass.join("");
       return inputSerial;
