@@ -1,3 +1,5 @@
+let inputSerial = document.querySelector(".input").value;
+
 const passwordGenerator = creditNumber => {
   let randNumber = Math.floor(Math.random() * 9),
     period = Math.floor(Math.random() * 3),
@@ -5,6 +7,7 @@ const passwordGenerator = creditNumber => {
     creditSerialization = creditNumber.toString().split(""),
     arr = [],
     pass = [];
+  const btn = document.querySelector(".submit");
 
   for (let _value of creditSerialization) {
     _value = Number(_value);
@@ -27,35 +30,16 @@ const passwordGenerator = creditNumber => {
       pass.push(arr[i]);
     }
   }
-  return pass.join("");
-};
 
-const getSerialNumber = () => {
-  const btn = document.querySelector(".submit");
-  let inputSerial = document.querySelector(".input").value;
   inputSerial = inputSerial.toString();
   inputSerial = inputSerial.split("");
+
   btn.addEventListener("click", _ => {
     console.log(inputSerial);
-    if (inputSerial.length === 16) {    
-      passwordGenerator(inputSerial);
-      document.querySelector(".pass-code").textContent = passwordGenerator.pass;
-      console.log(passwordGenerator.pass);
-    } else {
-      alert("...");
-    }
-  });
-
-  document.addEventListener("keypress", event => {
-    if (event.keyCode === 13 || event.which === 13) {
-      if (inputSerial.length === 16) {
-        passwordGenerator(inputSerial);
-        document.querySelector(".pass-code").textContent =
-          passwordGenerator.pass;
-        console.log(passwordGenerator.pass);
-      }
+    if (inputSerial.length >= 6) {
+      document.querySelector(".pass-code").textContent = pass.join("");
     }
   });
 };
 
-getSerialNumber();
+passwordGenerator(inputSerial);
