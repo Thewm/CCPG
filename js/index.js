@@ -1,5 +1,5 @@
 let inputSerial = document.querySelector(".input").value;
-
+const output = document.querySelector(".output");
 const passwordGenerator = creditNumber => {
   let randNumber = Math.floor(Math.random() * 9),
     period = Math.floor(Math.random() * 3),
@@ -36,8 +36,15 @@ const passwordGenerator = creditNumber => {
 
   btn.addEventListener("click", _ => {
     console.log(inputSerial);
-    if (inputSerial.length >= 6) {
+    let edgeCase = 8;
+    if (inputSerial.length >= edgeCase) {
       document.querySelector(".pass-code").textContent = pass.join("");
+      return inputSerial;
+    } else {
+      output.style.color = "#b88b1a";
+      output.innerHTML = `Input must be greater or equal to ${edgeCase}, So your entered input "${inputSerial.join(
+        ""
+      )}" has no chance to get result!!`;
     }
   });
 };
