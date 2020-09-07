@@ -1,5 +1,5 @@
 # Merseyside Password Generator
-### Earn your password in safest mode :lock: 
+### Earn your password(s) in safest mode :lock: 
 
 *** 
 
