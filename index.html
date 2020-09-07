@@ -5,29 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Marck+Script&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/47a06106ef.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,300;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <title>CCPG &mdash; Your random and reliable credit card password generator</title>
+    <title>Merseyside &mdash; Your Smart Password Generator</title>
 </head>
 
 <body id="wrapper">
-    <section class="container">
-        <header class="header">
-            <img src="images/magic-wand-1.png" alt="" class="header--logo">
-        </header>
-
-        <div class="main">
-            <input type="text" class="input" placeholder="Put Your Credit Card Serial Here ...">
-            <button type="submit" class="submit">Get Pass</button>
-            <div class="output">
-                <span class="pass-text">Password: </span>
-                <span class="pass-code">----</span>
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="result-container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label for="length">Password length</label>
+                <input type="number" id="length" min='4' max='20' value='8' />
+            </div>
+            <div class="setting">
+                <label for="uppercase">Include uppercase letters</label>
+                <input type="checkbox" id="uppercase" checked />
+            </div>
+            <div class="setting">
+                <label for="lowercase">Include lowercase letters</label>
+                <input type="checkbox" id="lowercase" checked />
+            </div>
+            <div class="setting">
+                <label for="numbers">Include numbers</label>
+                <input type="checkbox" id="numbers" checked />
+            </div>
+            <div class="setting">
+                <label for="symbols">Include symbols</label>
+                <input type="checkbox" id="symbols" checked />
+            </div>
+            <div class="setting">
+                <label for="ccpg" id="ccp">Credit Card Password &star;</label>
+                <input type="checkbox" id="ccpg" />
             </div>
         </div>
-
-    </section>
-    <script src="js/index.js"></script>
+        <button class="btn btn-large" id="generate">
+            Generate password
+        </button>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
